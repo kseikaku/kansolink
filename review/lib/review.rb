@@ -2,17 +2,16 @@
 # Review Class
 #2016/1/13
 require "date"
-require "../name/lib/name"
+require "../review/lib/reviewer"
 class Review
   def initialize(url)
     @url=url
-    @name=Name.new()
   end
   def show=(show)
     @show=show
   end
   def name=(name)
-    @name.name=name
+    @reviewer=Reviewer.new(name)    
   end
   def review_date=(date_string)
     @review_date=date_string
@@ -21,7 +20,7 @@ class Review
     @update_date=date_string
   end
   def name
-    return @name.name
+    return @reviewer.name
   end
   def url
     return @url
@@ -33,7 +32,7 @@ class Review
     return @update_date
   end
   def valid?
-    return true if @url
+    return true if @url && @reviewer.valid?
     return false
   end
   def sortkey

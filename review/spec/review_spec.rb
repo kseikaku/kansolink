@@ -7,6 +7,7 @@ require "../show/lib/show"
 describe "Review(劇評）の基本的な振る舞い" do
   let(:review1){Review.new('http://www.test.com/test.html')}
   let(:review2){Review.new(nil)}
+  let(:review3){Review.new('http://www.test.com/test.html')}
   let(:show){Show.new('test01')}
   before do
     review1.name="テスト"
@@ -17,6 +18,10 @@ describe "Review(劇評）の基本的な振る舞い" do
     review2.review_date="2001/01/01"
     review2.update_date="2015/01/01"
     review2.show=show
+    review3.name="いっちゃん"
+    review3.review_date="2001/01/01"
+    review3.update_date="2015/01/01"
+    review3.show=show
   end
   it "review1の情報が取得可能" do
     expect(review1.url).to eq "http://www.test.com/test.html"
@@ -30,6 +35,9 @@ describe "Review(劇評）の基本的な振る舞い" do
   end
   it "review2は無効" do
     expect(review2.valid?).to be false
+  end
+  it "review3は無効" do
+    expect(review3.valid?).to be false
   end
   it "sortkeyはreview_dateが戻る" do
     expect(review1.sortkey).to eq "2015/01/11"
