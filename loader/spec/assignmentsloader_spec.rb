@@ -6,6 +6,7 @@ require "assignmentsloader"
 describe "docからassignmentsを読み込む" do
   before do
     assignmentsloader=AssignmentsLoader.new('data/2nkproject.xml')
+    #assignmentsloader=AssignmentsLoader.new('data/2625dan.xml')
     @assignments=assignmentsloader.get_assigns()
   end
   it "castや演出家、脚本家であわせて39人" do
@@ -31,9 +32,16 @@ describe "docからassignmentsを読み込む" do
     end
   end
   it "assignmentsの一覧をプリント" do
+    expected=["水口てつ","岡村美雪","前田真里","中山研","太田佳伸","滝藤賢一","近田英紀","友松タケホ",
+      "町田沙織","内田慎二","吉田聡","奥住昌敏","岩城博","志賀正人","三沢一世","水野孝志","福山秀子",
+      "佐藤里恵","水口てつ","岡村美雪","前田真里","中山研","太田佳伸","滝藤賢一","近田英紀","友松タケホ",
+      "町田沙織","内田慎二","吉田聡","奥住昌敏","岩城博","志賀正人","三沢一世","水野孝志","福山秀子",
+      "佐藤里恵","水口てつ","滝藤賢一","佐藤里恵"]
+    person_array=Array.new()
     @assignments.each do |assign|
-      puts assign.person.id
+      person_array.push(assign.person.id) 
     end
+    expect(person_array).to match_array(expected)
   end
 
 end

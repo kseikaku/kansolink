@@ -1,77 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <company>
-  <name>2NKプロジェクト</name>
-  <kananame>つーえぬけーぷろじぇくと</kananame>
-  <companyurl />
-  <hpurl>http://www.geocities.jp/nkshakespeare/</hpurl>
+  <name>縁劇繍団つむじ</name>
+  <kananame>みどりげきだんつむじ</kananame>
+  <companyurl></companyurl>
+  <hpurl></hpurl>
   <fanurl />
   <shows>
-    <show showid="じゃじ05">
-      <title>じゃじゃ馬馴らし</title>
-      <ktitle>じゃじゃうまならし</ktitle>
-      <theater>シアターX（両国)</theater>
-      <fromdate>2005/10/20</fromdate>
-      <todate>2005/10/23</todate>
+    <show showid="辻三十13">
+      <title>辻三十郎道中記〜本当に大事なものは〜志免編　</title>
+      <ktitle>つじさんじゅうろうどうちゅうき〜ほんとうにだいじなものは〜しめへん　</ktitle>
+      <fromdate>2013/09/27</fromdate>
+      <todate>2013/09/29</todate>
       <place></place>
       <unit></unit>
-      <director>佐藤里恵</director>
-      <writer>佐藤里恵</writer>
-      <cast>水口てつ、岡村美雪、前田真里、中山研、太田佳伸、滝藤賢一、近田英紀、友松タケホ、町田沙織、内田慎二、吉田聡、奥住昌敏、岩城博、志賀正人、三沢一世、水野孝志、福山秀子</cast>
+      <theater>H732シアター(福岡</theater>
       <reviewers>
         <reviewer>
-          <reviewers_name>Cooney</reviewers_name>
-          <reviewers_url>http://homepage3.nifty.com/engeki/RP2005.10.htm#1</reviewers_url>
-          <reviewdate>2005/10/20</reviewdate>
-          <update>2005/11/12</update>
+          <reviewers_name>薙野信喜</reviewers_name>
+          <reviewers_url>http://f-e-now.ciao.jp/20130911.html</reviewers_url>
+          <reviewdate>2013/09/29</reviewdate>
+          <update>2013/12/20</update>
         </reviewer>
       </reviewers>
-      <sale>
-        <shop name="amazon">
-          <item>原作</item>
-          <title>じゃじゃ馬馴らし</title>
-          <asin>4480033203</asin>
-        </shop>
-      </sale>
-    </show>
-    <show showid="じゃじて05">
-      <title>じゃじゃ馬馴らしが馴らされて</title>
-      <ktitle>じゃじゃうまならしがならされて</ktitle>
-      <theater>シアターX（両国)</theater>
-      <fromdate>2005/10/20</fromdate>
-      <todate>2005/10/23</todate>
-      <place></place>
-      <unit></unit>
-      <director>佐藤里恵</director>
-      <writer>佐藤里恵</writer>
-      <cast>水口てつ、岡村美雪、前田真里、中山研、太田佳伸、滝藤賢一、近田英紀、友松タケホ、町田沙織、内田慎二、吉田聡、奥住昌敏、岩城博、志賀正人、三沢一世、水野孝志、福山秀子</cast>
-      <reviewers>
-        <reviewer>
-          <reviewers_name>Cooney</reviewers_name>
-          <reviewers_url>http://homepage3.nifty.com/engeki/RP2005.10.htm#2</reviewers_url>
-          <reviewdate>2005/10/21</reviewdate>
-          <update>2005/11/12</update>
-        </reviewer>
-      </reviewers>
-    </show>
-    <show showid="じゃじダミー05">
-      <title>じゃじゃダミー</title>
-      <ktitle>じゃじゃうまならしがならされて</ktitle>
-      <theater>シアターX（両国)</theater>
-      <fromdate>2005/10/20</fromdate>
-      <todate>2005/10/23</todate>
-      <place></place>
-      <unit></unit>
-      <director>水口てつ</director>
-      <writer>佐藤里恵</writer>
-      <cast>水口てつ、滝藤賢一</cast>
-      <reviewers>
-        <reviewer>
-          <reviewers_name>Cooney</reviewers_name>
-          <reviewers_url>http://homepage3.nifty.com/engeki/RP2005.10.htm#2</reviewers_url>
-          <reviewdate>2005/10/21</reviewdate>
-          <update>2005/11/12</update>
-        </reviewer>
-      </reviewers>
+      <director>秋村有紀</director>
+      <writer>旋風三十郎</writer>
+      <cast>旋風三十郎、武田ヨシヒロ、村山千恵、岡本斗志、藤裕美、阿部周平、村井善幸</cast>
     </show>
   </shows>
 </company>

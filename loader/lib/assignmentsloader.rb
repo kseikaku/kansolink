@@ -1,40 +1,42 @@
 # encoding:UTF-8
 # AssignmentsLoader Class
 #2016/1/14
-require "rexml/document"
+require "loader"
 require "../show/lib/show"
 require "../person/lib/person"
 require "../person/lib/castsplitter"
 require "../assignment/lib/assignment"
 require "../assignment/lib/role"
 require "../assignment/lib/assignments"
-require "converter"
 
-class AssignmentsLoader
+class AssignmentsLoader < Loader
   def initialize(filename)
-    @filename=filename
-    converter=Converter.new()
-    @converted_filename=converter.convert(@filename)
-    self.load
+    super(filename)
   end
   def load()
-    doc=REXML::Document.new(File.open(@converted_filename))
-    basename=File.basename(@filename,".xml")
-    @assignments=Assignments.new()
+    super()
+    @loaditems=Assignments.new()
     idx=0
-    doc.elements.each('company/shows/show') do |showitem|
+    @doc.elements.each('company/shows/show') do |showitem|
       idx=idx+1
       str=idx.to_s
-      show=Show.new(basename+str)
-      assigns_array=make_cast(show,showitem.elements['cast']) if showitem.elements['cast'] 
-      assigns_array = add_assign(assigns_array,show,showitem.elements['director'],Role.new(Role::DIRECTOR))     
-      assigns_array = add_assign(assigns_array,show,showitem.elements['writer'],Role.new(Role::WRITER)) 
-      add_assignments(assigns_array)    
+      show=Show.new(@basename+str)
+      @items_array=make_cast(show,xmltext(showitem,'cast'))
+      @items_array= add_assign(@items_array,show,xmltext(showitem,'director'),Role.new(Role::DIRECTOR))     
+      @items_array= add_assign(@items_array,show,xmltext(showitem,'writer'),Role.new(Role::WRITER)) 
+      #add_assignments(assigns_array)    
     end
+    make_return_items
   end
   def make_cast(show,item)
-    casts=CastSplitter.new(item.text).get_casts
-    assigns_array=Array.new()
+    unless item
+      if @items_array
+        return @items_array
+      else
+        return Array.new
+      end
+    end
+    casts=CastSplitter.new(item).get_casts
     assigns_array=casts.map do |cast|
       role=Role.new(Role::CAST)
       person=Person.new(cast)
@@ -44,13 +46,13 @@ class AssignmentsLoader
       assign.person=person
       assign
     end
-    return assigns_array
+    @items_array.concat(assigns_array)
   end
   def add_assign(assign_array,show,item,role)
     
     return assign_array unless item
    
-    person=Person.new(item.text)
+    person=Person.new(item)
     assign=Assignment.new()
     assign.show=show
     assign.role=role
@@ -59,12 +61,7 @@ class AssignmentsLoader
     assign_array.push(assign)
     return assign_array
   end
-  def add_assignments(assigns_array)
-    assigns_array.each do |assign|
-      @assignments << assign
-    end
-  end
   def get_assigns
-    return @assignments
+    get_items 
   end
 end
