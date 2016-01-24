@@ -1,7 +1,7 @@
 # encoding:UTF-8
 # Companies Class
 #2016/1/1
-require "company"
+require "../company/lib/company"
 
 class Companies
   def initialize
