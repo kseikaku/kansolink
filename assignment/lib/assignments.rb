@@ -46,5 +46,10 @@ class Assignments
       yield assign
     end
   end
+  def concat(assignments)
+    assignments.each do |assign|
+      @assign_array << assign
+    end
+  end
 
 end
