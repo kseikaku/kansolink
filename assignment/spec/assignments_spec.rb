@@ -4,13 +4,15 @@
 #公演とキャストやレビュアーとの関係の集合の仕様
 require 'assignments'
 require 'assignment'
-require 'show'
-require 'person'
 require 'role'
+require '../show/lib/show'
+require '../person/lib/person'
 describe "Assignmentsの基本的な振る舞い" do
   before do
     show1=Show.new('test01')
     show2=Show.new('test02')
+    show1.fromdate="2015/12/01"
+    show2.fromdate="2015/12/31"
     person1=Person.new('テスト太郎')
     person2=Person.new('テスト次郎')
     person3=Person.new('テスト三郎')
@@ -73,6 +75,9 @@ describe "Assignmentsの基本的な振る舞い" do
   end
   it "showとpersonが同じassignmentsを一つにまとめる" do 
     expect(@assignments.count).to eq 4
+  end
+  it "最新のShowのShowidはtest02" do
+    expect(@assignments.latest_show.id).to eq "test02"
   end
 
 end
