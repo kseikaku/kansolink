@@ -1,7 +1,7 @@
 # encoding:UTF-8
 # AssignmentsLoader Class
 #2016/1/14
-require "loader"
+require "../loader/lib/loader"
 require "../show/lib/show"
 require "../person/lib/person"
 require "../person/lib/castsplitter"

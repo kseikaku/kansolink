@@ -2,11 +2,12 @@
 # Personsloader Class
 #2016/1/10
 require "rexml/document"
-require 'converter'
+require '../loader/lib/converter'
 require '../person/lib/persons'
 require '../person/lib/person'
 
-class Personsloader
+class PersonsLoader
+  attr_reader :persons
   def initialize(filename)
     @filename=filename
     @converter=Converter.new()

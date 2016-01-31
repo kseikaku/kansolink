@@ -5,10 +5,11 @@
 require "../show/lib/shows"
 require "../company/lib/companies"
 require "../assignment/lib/assignments"
-require "companyloader"
-require "assignmentsloader"
+require "../loader/lib/companyloader"
+require "../loader/lib/assignmentsloader"
 
 class XmlLoader
+  attr_reader :companies, :shows, :assignments
   def initialize(folder)
     @folder=folder
     @shows=Shows.new

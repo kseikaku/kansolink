@@ -2,7 +2,7 @@
 # CompanyLoader Class
 #2015/12/30  
 #2016/1/23 update
-require "loader"
+require "../loader/lib/loader"
 require "../show/lib/shows"
 require "../show/lib/show"
 require "../company/lib/company"

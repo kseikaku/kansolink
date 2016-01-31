@@ -5,7 +5,7 @@ require "spec_helper"
 require "personsloader"
 
 describe "personsのxmlファイルを読み込みpersonsを作成" do
-    let(:personsloader){Personsloader.new('data/people/people.xml')}
+    let(:personsloader){PersonsLoader.new('data/people/people.xml')}
    before do
     @persons=personsloader.get_persons()
   end

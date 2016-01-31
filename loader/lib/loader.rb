@@ -1,7 +1,7 @@
 # encoding:UTF-8
 # Loader Class(loaderの抽象クラス)
 #2016/1/23
-require "converter"
+require "../loader/lib/converter"
 require "rexml/document"
 class Loader
   def initialize(filename)
