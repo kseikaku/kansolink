@@ -4,6 +4,8 @@
 require "../name/lib/name"
 
 class Company
+  attr_reader :id
+  attr_accessor :url, :moddate,:blog, :twit
   def initialize(companyid)
     @id=companyid
     @name=Name.new()
@@ -15,27 +17,10 @@ class Company
   def kname=(kn)
     @name.kname=kn
   end
-  def url=(u)
-    @url=u
-  end
-  def moddate=(dt)
-    @moddate=dt
-  end
-
-  def id
-    @id
-  end
   def name
     @name.name
   end
   def kname
     @name.kname
   end
-  def url
-    @url
-  end
-  def moddate
-    @moddate
-  end
-   
 end

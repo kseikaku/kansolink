@@ -5,17 +5,21 @@ require "spec_helper"
 require "company"
 
 describe "Companyの基本的な振る舞い" do
+  let(:company){Company.new("test")}
   before do
-    @company=Company.new("test")
-    @company.name="テスト"
-    @company.kname="てすと"
-    @company.url="http://test.com"
+    company.name="テスト"
+    company.kname="てすと"
+    company.url="http://test.com"
+    company.twit="@twit"
+    company.blog="http://blog.test.com/test/"
 
   end
   it "Companyの属性が確認できる" do
-    expect(@company.id).to eq "test"
-    expect(@company.name).to eq "テスト"
-    expect(@company.kname).to eq "てすと"
-    expect(@company.url).to eq "http://test.com"
+    expect(company.id).to eq "test"
+    expect(company.name).to eq "テスト"
+    expect(company.kname).to eq "てすと"
+    expect(company.url).to eq "http://test.com"
+    expect(company.twit).to eq "@twit"
+    expect(company.blog).to eq "http://blog.test.com/test/"
   end
 end
