@@ -1,7 +1,7 @@
 # encoding:UTF-8
 # Company Class
 #2016/1/1
-require "../name/lib/name"
+require_relative "../../name/lib/name"
 
 class Company
   attr_reader :id
@@ -22,5 +22,10 @@ class Company
   end
   def kname
     @name.kname
+  end
+  def link
+    ret="<a href='http://engeki.kansolink.com/review/#{id}.html'>"
+    ret="#{ret}#{@name.name}</a>"
+    return ret
   end
 end

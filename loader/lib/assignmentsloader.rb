@@ -1,13 +1,13 @@
 # encoding:UTF-8
 # AssignmentsLoader Class
 #2016/1/14
-require "../loader/lib/loader"
-require "../show/lib/show"
-require "../person/lib/person"
-require "../person/lib/castsplitter"
-require "../assignment/lib/assignment"
-require "../assignment/lib/role"
-require "../assignment/lib/assignments"
+require_relative "../../loader/lib/loader"
+require_relative "../../show/lib/show"
+require_relative "../../person/lib/person"
+require_relative "../../person/lib/castsplitter"
+require_relative "../../assignment/lib/assignment"
+require_relative "../../assignment/lib/role"
+require_relative "../../assignment/lib/assignments"
 
 class AssignmentsLoader < Loader
   def initialize(filename)

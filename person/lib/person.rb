@@ -1,9 +1,10 @@
 # encoding:UTF-8
 # Person Class
 #2016/1/9
-require '../name/lib/name'
+require_relative '../../name/lib/name'
 
 class Person
+  attr_accessor :fname, :wiki, :blog, :twit, :urlencode
   def initialize(nam)
     @name=Name.new()
     @name.name=nam
@@ -14,42 +15,12 @@ class Person
   def kname=(knam)
     @name.kname=knam
   end
-  def fname=(fnam)
-    @fname=fnam
-  end
-  def urlencode=(urle)
-    @urlencode=urle
-  end
-  def wiki=(wik)
-    @wiki=wik
-  end
-  def blog=(blg)
-    @blog=blg
-  end
-  def twit=(twt)
-    @twit=twt
-  end
 
   def name
     return @name.name
   end
   def kname
     return @name.kname
-  end
-  def fname
-    return @fname
-  end
-  def urlencode
-    return @urlencode
-  end
-  def wiki
-    return @wiki
-  end
-  def blog
-    return @blog
-  end
-  def twit
-    return @twit
   end
   def id
     return @name.name
@@ -63,5 +34,10 @@ class Person
   def ==(person)
     return true if self.id==person.id
     return false
+  end
+  def link
+    ret="<a href='http://engeki.kansolink.com/people/#{@fname}'>"
+    ret="#{ret}#{@name.name}</a>"
+    return ret
   end
 end

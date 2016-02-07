@@ -1,43 +1,36 @@
 # encoding:UTF-8
 # Persons Class
 #2016/1/9
-
-class Persons
-  def initialize()
-    @persons_array=Array.new()
-  end
-  def count
-    return @persons_array.count
-  end
-  def <<(person)
-    @persons_array << person
-  end
+#2016/1/29 update
+require_relative "../../group/lib/group"
+class Persons < Group
   def getbychar(first_str)
     persons=Persons.new()
-    @persons_array.select{|person|person.startby?(first_str)}.each do |person|
+    @item_array.select{|person|person.startby?(first_str)}.each do |person|
       persons << person
     end
     return persons
   end
   def getbyid(id)
-    @persons_array.each do |person|
+    @item_array.each do |person|
       return person if person.id==id
     end
     return nil
   end
-  def each
-    @persons_array.each do |person|
-      yield person      
+  def getby(something)
+    if something.class == Person
+      @cond= -> person{person.name==something.name}
     end
+    @result=Persons.new()
+    super(something)
   end
-  def concat(persons)
-    persons.each do |person|
-      @persons_array << person 
+  def getbyfname(fname)
+    @result=Persons.new()
+    @cond= -> person{person.fname==fname}
+    public_method(:getby).super_method.call(fname)
+    @result.each do |p|
+      return p
     end
-  end
-  def has?(person)
-    return true if @persons_array.select{|psn|psn==person}.count>0
-    return false
   end
 
 end

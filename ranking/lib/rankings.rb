@@ -1,19 +1,22 @@
 # encoding:UTF-8
 # Rankings Class
 #2016/1/24
-require "ranking"
-require "../group/lib/group"
-require "../person/lib/person"
-require "../company/lib/company"
-require "../show/lib/show"
+require_relative "../../ranking/lib/ranking"
+require_relative "../../group/lib/group"
+require_relative "../../person/lib/person"
+require_relative "../../company/lib/company"
+require_relative "../../show/lib/show"
 
 class Rankings < Group
   def initialize
     super()
   end
+  def <<(ranking)
+    puts ranking.class unless ranking.class == Ranking
+    super(ranking)
+  end
   def getby(something)
 
-    puts something.class
     if something.class==Rank
       @cond= -> rank{rank.rank==something}
     elsif something.class==Show
@@ -30,5 +33,11 @@ class Rankings < Group
       
     @result=Rankings.new()
     super(something)
+  end
+  def sort!(dir)
+    super(dir)
+    @item_array.each_with_index do |ranking,index|
+      ranking.rank=Rank.new(index+1)
+    end
   end
 end

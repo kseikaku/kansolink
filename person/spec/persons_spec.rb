@@ -11,14 +11,16 @@ describe "演劇関係者集合クラスの基本的な振る舞い" do
     @persons2=Persons.new()
     person1=Person.new('三谷幸喜')
     person1.kname='みたにこうき'
-    person2=Person.new('剛力彩芽')
-    person2.kname='ごうりきあやめ'
+    person1.fname="pmitani.html"
+    @person2=Person.new('剛力彩芽')
+    @person2.kname='ごうりきあやめ'
+    @person2.fname="pgoriki.html"
     @person3=Person.new('山本耕史')
     @person3.kname='やまもとこうじ'
     @persons1 << person1
-    @persons1 << person2
+    @persons1 << @person2
     @persons2 << person1
-    @persons2 << person2
+    @persons2 << @person2
     @persons2 << @person3
   end
   it "演劇関係者の数は2人" do
@@ -42,6 +44,9 @@ describe "演劇関係者集合クラスの基本的な振る舞い" do
   it "persons2をつなげると、person3(山本耕史)のみが追加される" do
     @persons1.concat(@persons2)
     expect(@persons2.count).to eq 3
+  end
+  it "personsからファイルネームでpersonを特定して抽出" do
+    expect(@persons1.getbyfname("pgoriki.html").name).to eq @person2.name 
   end
 
 end

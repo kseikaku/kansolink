@@ -56,5 +56,8 @@ describe "Person(演劇関係者)の基本的な振る舞い" do
     expect(person2.id).to eq '三谷幸喜'
     expect(person==person2).to be true
   end
+  it "PersonのLinkでフルパスが返ってくる" do
+    expect(person.link).to eq "<a href='http://engeki.kansolink.com/people/pmitani.html'>三谷幸喜</a>"
+  end
 
 end

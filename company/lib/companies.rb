@@ -1,8 +1,8 @@
 # encoding:UTF-8
 # Companies Class
 #2016/1/1
-require "../company/lib/company"
-require "../group/lib/group"
+require_relative "../../company/lib/company"
+require_relative "../../group/lib/group"
 class Companies < Group
   def getbyid(ci)
     @item_array.each do |c|

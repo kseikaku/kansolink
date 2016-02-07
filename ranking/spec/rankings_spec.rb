@@ -26,8 +26,8 @@ describe "Rankingsの基本的な振る舞い " do
     ranking4.todate='2015/01/14'
     ranking3.show=show1
     ranking4.show=show2
-    ranking1.type=RankingType.new(RankingType::PERSON)
-    ranking4.type=RankingType.new(RankingType::PERSON)
+    ranking1.type=RankingType.new(RankingType::RT_Person)
+    ranking4.type=RankingType.new(RankingType::RT_Person)
     rankings << ranking1
     rankings << ranking2
     rankings << ranking3
@@ -52,7 +52,7 @@ describe "Rankingsの基本的な振る舞い " do
     end
   end
   it "RankingTypeを指定して取得する。2件返ってくる" do
-    person_rankings=rankings.getby(RankingType.new(RankingType::PERSON))
+    person_rankings=rankings.getby(RankingType.new(RankingType::RT_Person))
     expect(person_rankings.count).to eq 2
   end
 end

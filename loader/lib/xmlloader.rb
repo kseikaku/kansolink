@@ -2,11 +2,11 @@
 # XMLLoader Class
 #2015/12/30
 # フォルダのReviewXMLファイルを全て読み込む
-require "../show/lib/shows"
-require "../company/lib/companies"
-require "../assignment/lib/assignments"
-require "../loader/lib/companyloader"
-require "../loader/lib/assignmentsloader"
+require_relative "../../show/lib/shows"
+require_relative "../../company/lib/companies"
+require_relative "../../assignment/lib/assignments"
+require_relative "../../loader/lib/companyloader"
+require_relative "../../loader/lib/assignmentsloader"
 
 class XmlLoader
   attr_reader :companies, :shows, :assignments

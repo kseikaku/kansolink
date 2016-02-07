@@ -2,10 +2,10 @@
 # CompanyLoader Class
 #2015/12/30  
 #2016/1/23 update
-require "../loader/lib/loader"
-require "../show/lib/shows"
-require "../show/lib/show"
-require "../company/lib/company"
+require_relative "../../loader/lib/loader"
+require_relative "../../show/lib/shows"
+require_relative "../../show/lib/show"
+require_relative "../../company/lib/company"
 class CompanyLoader < Loader
   def initialize(filename)
     super(filename)
@@ -21,6 +21,7 @@ class CompanyLoader < Loader
     @company.name=xmltext(@doc,'company/name')
     @company.kname=xmltext(@doc,'company/kananame')
     @company.url=xmltext(@doc,'company/hpurl')
+    @company.twit=xmltext(@doc,'company/twit')
     @company.moddate=moddate
     idx=0
     @doc.elements.each('company/shows/show') do |showitem|

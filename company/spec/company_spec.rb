@@ -22,4 +22,7 @@ describe "Companyの基本的な振る舞い" do
     expect(company.twit).to eq "@twit"
     expect(company.blog).to eq "http://blog.test.com/test/"
   end
+  it "linkの形式で返ってくる" do
+    expect(company.link).to eq "<a href='http://engeki.kansolink.com/review/test.html'>テスト</a>"
+  end
 end

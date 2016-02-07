@@ -17,7 +17,7 @@ describe "company loadeの基本動作" do
     @shows.each do |show|
       if show.id=="2nkproject1" then
         expect(show.title).to eq "じゃじゃ馬馴らし"
-        expect(show.sortkey).to eq "じゃじゃうまならし"
+        expect(show.sortkey).to eq "2005/10/20"
         expect(show.theater).to eq "シアターX"
         expect(show.fromdate).to eq "2005/10/20"
         expect(show.todate).to eq "2005/10/23"
@@ -29,6 +29,9 @@ describe "company loadeの基本動作" do
     expect(@company.kname).to eq "つーえぬけーぷろじぇくと"
   end
   it "companyの更新日付は20151231" do
-    expect(@company.moddate).to eq "2016/01/17"
+    expect(@company.moddate).to eq "2016/02/07"
+  end
+  it "companyのtwitは2nkproject" do
+    expect(@company.twit).to eq "2nkproject"
   end
 end

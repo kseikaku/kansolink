@@ -34,6 +34,11 @@ class Term
     to=Date.parse(@todate)
     return to-from
   end
+  def to_s
+    from=Date.parse(@fromdate)
+    to=Date.parse(@todate)
+    return "#{from.strftime('%Y%m%d')}-#{to.strftime('%Y%m%d')}"
+  end
 end
 
 class TermType

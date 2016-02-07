@@ -2,9 +2,9 @@
 # Personsloader Class
 #2016/1/10
 require "rexml/document"
-require '../loader/lib/converter'
-require '../person/lib/persons'
-require '../person/lib/person'
+require_relative '../../loader/lib/converter'
+require_relative '../../person/lib/persons'
+require_relative '../../person/lib/person'
 
 class PersonsLoader
   attr_reader :persons

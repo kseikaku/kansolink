@@ -1,10 +1,10 @@
 # encoding:UTF-8
 # Show Class
-require "../name/lib/name"
-require "../show/lib/schedule"
+require_relative "../../name/lib/name"
+require_relative "../../show/lib/schedule"
 
 class Show
-  
+  attr_accessor :companyid , :moddate
   def initialize(strShowid)
     @id=strShowid
     @title=Name.new()
@@ -14,7 +14,7 @@ class Show
     return @title.name
   end
   def sortkey
-    return @title.sortkey
+    return @schedule.fromdate
   end
   def startby?(start_char)
     return @title.startby?(start_char)
@@ -28,10 +28,6 @@ class Show
   def theater
     @schedule.place
   end
-  def companyid
-    @companyid
-  end
-
   def title=(tit)
     @title.name=tit
   end
@@ -47,9 +43,6 @@ class Show
   def theater=(theater)
     @schedule.place=theater
   end
-  def moddate=(mod)
-    @moddate=mod
-  end
   def id
     return @id
   end
@@ -62,14 +55,13 @@ class Show
   def term
     return @schedule.term
   end
-  def companyid=(ci)
-    @companyid=ci
-  end
-  def moddate
-    return @moddate
-  end
   def ==(show)
     return true if self.id==show.id
     return false
+  end
+  def link
+    ret="<a href='http://engeki.kansolink.com/shows/#{id}.html'>"
+    ret="#{ret}#{@title.name}</a>"
+    return ret
   end
 end

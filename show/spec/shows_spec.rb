@@ -2,7 +2,9 @@
 require "spec_helper"
 require "shows"
 require "show"
+require "../company/lib/company"
 describe Shows do
+  let(:company1){Company.new('test')}
   before do
     @shows=Shows.new()
     @shows2=Shows.new
@@ -12,6 +14,7 @@ describe Shows do
     show1.fromdate="2015/01/20"
     show1.todate="2015/01/30"
     show1.theater="駅前劇場(下北沢)"
+    show1.companyid=company1.id
     @shows.add_show(show1)
     @shows2.add_show(show1)
     show2=Show.new("test02")
@@ -20,6 +23,7 @@ describe Shows do
     show2.fromdate="2015/02/20"
     show2.todate="2015/02/30"
     show2.theater="銀河劇場(天王州)"
+    show2.companyid=company1.id
     @shows.add_show(show2)
     @shows2.add_show(show1)
   end
@@ -60,6 +64,14 @@ describe Shows do
     it "idでshowを取得" do
       show=@shows.getbyid("test01")
       expect(show.title).to eq "テスト1"
+    end
+    it "companyでshowを取得" do
+      new_shows=@shows.getby(company1)
+      expect(new_shows.count).to eq 2
+    end
+    it "latest_show（新しい公演)は、トステ2" do
+      expect(@shows.latest_show.title).to eq 'トステ2'
+
     end
   end
 

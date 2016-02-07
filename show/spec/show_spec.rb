@@ -15,9 +15,6 @@ describe "showの基本的な振る舞い" do
     @show.companyid="test"
     @show2=Show.new("test01")
   end
-  it "" do
-    expect(1+1).to eq 2
-  end
   it "showidが返ってくる" do
     expect(@show.id).to eq "test01"
   end
@@ -41,5 +38,8 @@ describe "showの基本的な振る舞い" do
   end
   it "Show1とShow2は同一" do
     expect(@show==@show2).to be true
+  end
+  it "linkは、公演ホームページのフルURLが返ってくる" do
+    expect(@show.link).to eq "<a href='http://engeki.kansolink.com/shows/test01.html'>テスト</a>"
   end
 end

@@ -1,8 +1,8 @@
 # encoding:UTF-8
 # Assignments Class
 #2016/1/13
-require "../group/lib/group"
-require "../show/lib/shows"
+require_relative "../../group/lib/group"
+require_relative "../../show/lib/shows"
 class Assignments < Group
   def initialize()
     super()
