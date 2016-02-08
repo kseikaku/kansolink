@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<company>
+  <name>199Q太陽族</name>
+  <kananame>いちきゅうきゅうきゅうたいようぞく</kananame>
+  <companyurl />
+  <hpurl></hpurl>
+  <fanurl />
+  <shows>
+    <show showid="街踏劇00">
+      <title>街踏劇　ぼちぼちいこか</title>
+      <ktitle>ぼちぼちいこか</ktitle>
+      <fromdate>2000/10/28</fromdate>
+      <todate>2000/11/05</todate>
+      <place />
+      <unit></unit>
+      <reviewers>
+        <reviewer>
+          <reviewers_name>まねきねこ</reviewers_name>
+          <reviewers_url>http://homepage1.nifty.com/mneko/play/A/20001104ms.htm</reviewers_url>
+          <reviewdate>2000/11/04</reviewdate>
+        </reviewer>
+      </reviewers>
+      <theater>天王寺公園河底池西側(15:00～)　生國魂神社境内(18:00～)元精華小学校(20:30～)（大阪）</theater>
+      <director>岩崎正裕</director>
+      <writer>岩崎正裕</writer>
+      <cast>工藤俊作、岸部孝子、金田典子、篠原裕紀子、上宇都理恵、佐藤めぐみ、三上剛、北岡啓孝、南勝、石橋和也、高田達郎、石塚博章、藤岡悠芙子、得田晃子、谷弘恵、田矢雅美、前田有香子、森本研典、原真、
+</cast>
+    </show>
+    <show showid="最後の00">
+      <title>最後の晩餐</title>
+      <ktitle>さいごのばんさん</ktitle>
+      <fromdate>2000/06/13</fromdate>
+      <todate>2000/06/18</todate>
+      <reviewers>
+        <reviewer>
+          <reviewers_url>http://homepage1.nifty.com/mneko/play/A/20000617M.htm</reviewers_url>
+          <reviewers_name>まねきねこ</reviewers_name>
+          <reviewdate>2000/06/17</reviewdate>
+        </reviewer>
+      </reviewers>
+      <theater>芸術創造館　大練習室(大阪）</theater>
+      <unit>短編集「なしくずしの死」</unit>
+      <director>岩崎正裕</director>
+      <writer>北村想</writer>
+      <cast>工藤俊作、前田有香子</cast>
+    </show>
+    <show showid="帰らな00">
+      <title>帰らない人</title>
+      <ktitle>かえらないひと</ktitle>
+      <fromdate>2000/06/13</fromdate>
+      <todate>2000/06/18</todate>
+      <reviewers>
+        <reviewer>
+          <reviewers_url>http://homepage1.nifty.com/mneko/play/A/20000617M.htm</reviewers_url>
+          <reviewers_name>まねきねこ</reviewers_name>
+          <reviewdate>2000/06/17</reviewdate>
+        </reviewer>
+      </reviewers>
+      <theater>芸術創造館　大練習室(大阪）</theater>
+      <unit>短編集「なしくずしの死」</unit>
+      <director>岩崎正裕</director>
+      <writer>岩崎正裕</writer>
+      <cast>南勝、北岡啓孝、田矢雅美、高田達郎</cast>
+    </show>
+    <show showid="恋愛心00">
+      <unit>短編集「なしくずしの死」</unit>
+      <title>恋愛心中</title>
+      <ktitle>れんあいしんじゅう</ktitle>
+      <fromdate>2000/06/13</fromdate>
+      <todate>2000/06/18</todate>
+      <reviewers>
+        <reviewer>
+          <reviewers_url>http://homepage1.nifty.com/mneko/play/A/20000617M.htm</reviewers_url>
+          <reviewers_name>まねきねこ</reviewers_name>
+          <reviewdate>2000/06/17</reviewdate>
+        </reviewer>
+      </reviewers>
+      <theater>芸術創造館　大練習室(大阪）</theater>
+      <director>金田典子</director>
+      <writer>花田明子</writer>
+      <cast>森本研典、岸部孝子、佐藤めぐみ、三上剛、上宇都理恵、金田典子</cast>
+    </show>
+    <show showid="それを98">
+      <title>それを夢と知らない</title>
+      <ktitle>それをゆめとしらない</ktitle>
+      <fromdate>1998/09/18</fromdate>
+      <todate>1998/09/20</todate>
+      <place></place>
+      <unit></unit>
+      <theater>駅前劇場(下北沢)</theater>
+      <reviewers>
+        <reviewer>
+          <reviewers_name>まねきねこ</reviewers_name>
+          <reviewers_url>http://homepage1.nifty.com/mneko/play/A/19980920M2.htm</reviewers_url>
+          <reviewdate>1998/09/20</reviewdate>
+          <update>2006/10/23</update>
+        </reviewer>
+        <reviewer>
+          <reviewers_url>http://old.hibitano.michikusa.jp/diary/100912.html</reviewers_url>
+          <reviewers_name>だいち</reviewers_name>
+        </reviewer>
+        <reviewer>
+          <reviewers_url>http://www.246.ne.jp/~mit/gh98-8=9.htm#980918</reviewers_url>
+          <reviewers_name>中田満之</reviewers_name>
+        </reviewer>
+      </reviewers>
+      <director>岩崎正裕</director>
+      <writer>岩崎正裕</writer>
+      <cast>金田典子、北山あき、篠原裕紀子、工藤俊作、森本研典、岸部孝子、佐藤めぐみ、上宇都理恵、北岡啓孝、三上剛</cast>
+    </show>
+    <show showid="ここか97">
+      <title>ここからは遠い国</title>
+      <ktitle>ここからはとおいくに</ktitle>
+      <fromdate>1997/03/01</fromdate>
+      <todate>1997/03/02</todate>
+      <place></place>
+      <unit></unit>
+      <theater>パナソニックグローブ座</theater>
+      <reviewers>
+        <reviewer>
+          <reviewers_name>まねきねこ</reviewers_name>
+          <reviewers_url>http://homepage1.nifty.com/mneko/play/A/19970302M.htm</reviewers_url>
+          <reviewdate>1997/03/02</reviewdate>
+          <update>2006/10/23</update>
+        </reviewer>
+        <reviewer>
+          <reviewers_url>http://www.sun-inet.or.jp/~miyoko/jpm/box/shibai/shibai97/koko.html</reviewers_url>
+          <reviewers_name>みよこ</reviewers_name>
+        </reviewer>
+      </reviewers>
+      <director>岩崎正裕</director>
+      <writer>岩崎正裕</writer>
+      <cast>森本研典、南勝、金田典子、ほか全１３名</cast>
+    </show>
+  </shows>
+  <relurl>
+    <title>太陽族</title>
+    <url>taiyozoku.html</url>
+  </relurl>
+</company>
